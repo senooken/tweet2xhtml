@@ -5,14 +5,16 @@
     <title>Tweet2XHTML</title>
     <meta name="author" content="SENOO, Ken" />
     <script>
-      function tweet2xhtml() {
-        var value = document.getElementById("input").value;
-        value = value.replace(/<br>/g, "<br />");
-        value = value.replace(/&mdash;/g, "—");
-        value = value.replace(/<script.*<\/script>/g, "");
-        var target = document.getElementById("output");
-        target.value = value;
-      }
+// <![CDATA[
+function tweet2xhtml() {
+  var value = document.getElementById("input").value;
+  value = value.replace(/<br>/g, "<br />");
+  value = value.replace(/&mdash;/g, "—");
+  value = value.replace(/<script.*<\/script>/g, "");
+  var target = document.getElementById("output");
+  target.value = value;
+}
+// ]]>
     </script>
   </head>
   <body>
